@@ -1,0 +1,30 @@
+*{
+    // border: 1px solid;
+}
+
+.SearchJobBody{
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+    "searchTag searchTag searchTag "
+    "search applicantList applicantList ";
+    grid-template-rows: 30vh 1fr;
+    grid-template-columns: 1fr 4fr;
+
+    .searchTag{
+        grid-area: searchTag;
+        height: 30vh;
+
+    }
+    .searh{
+        grid-area: search;
+        height: 100%;
+    }
+
+    .applicantList{
+        grid-area: applicantList;
+        height: 100%;
+        padding: .5rem;
+
+    }
+}
