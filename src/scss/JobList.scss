@@ -20,6 +20,8 @@
             border-radius: 5px;
             margin: 1vh;
             box-shadow: 1px 1px 1px gray;
+            border: .1rem solid;
+
             overflow: hidden;
             overflow-y: scroll;
             &::-webkit-scrollbar{

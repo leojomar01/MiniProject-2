@@ -28,6 +28,7 @@
   margin: 1vh;
   -webkit-box-shadow: 1px 1px 1px gray;
           box-shadow: 1px 1px 1px gray;
+  border: .1rem solid;
   overflow: hidden;
   overflow-y: scroll;
 }

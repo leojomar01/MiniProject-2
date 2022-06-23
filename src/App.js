@@ -1,4 +1,3 @@
-import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import SearchJob from './components/SearchJob';
 import ApplicantList from './components/ApplicantList';

@@ -3,7 +3,7 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <>
+    <div className='homePage'>
       <section className='home'>
         <div className="container-home grid">
             <div className="left">
@@ -28,7 +28,7 @@ const Home = () => {
         </div>
       </section>
 
-    </>
+    </div>
   )
 }
 

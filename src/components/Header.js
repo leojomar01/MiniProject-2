@@ -20,7 +20,8 @@ const Header = () => {
     })
   return (
    
-        <header className='header'>
+      <div className='homePage'>
+          <header className='header'>
             <div className="container flex">
                 <div className="logo">
                     KDS<img src="../assets/logo.png" alt="" />
@@ -49,7 +50,8 @@ const Header = () => {
                     {sidebar ? <CloseIcon/> : <MenuIcon/>}
                 </button>
             </div>
-        </header>   
+        </header> 
+      </div>  
     
   )
 }

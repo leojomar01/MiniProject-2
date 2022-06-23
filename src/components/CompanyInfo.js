@@ -8,9 +8,17 @@ import Header from './Header';
 
 const CompanyInfo = (props) => {
     const arr = [1,2,3,4,5,6,7,8,9]
-    const newIndex = useLocation();
-    console.log(newIndex.state);
-    const company = newIndex.state;
+    const company = useLocation().state;
+    console.log(company);
+    window.scrollTo(0, 0);
+    
+
+
+
+
+    
+   
+
 
   return (
     <div>
