@@ -27,7 +27,7 @@ const Home = () => {
             </div>
         </div>
       </section>
-
+    <hr />
     </div>
   )
 }

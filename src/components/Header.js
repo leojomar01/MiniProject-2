@@ -10,10 +10,15 @@ import '../css/App.css';
 
 const Header = () => {
     const [sidebar, setSidebar] = useState(false);
+    const [showBtn, setShowBtn] = useState(false)
     const navigate = useNavigate();
     const loginBtn = () => navigate('/Login');
-    const regBtn = () => navigate('/Validate');
+    const regBtn = () => {
+        navigate('/Validate');
+        setShowBtn(false);
+    }
 
+    const profileBtn =  () => setShowBtn(true);
     window.addEventListener("scroll", function(){
         const header = this.document.querySelector("header")
         header.classList.toggle("active", window.scrollY > 200)
@@ -22,7 +27,7 @@ const Header = () => {
    
       <div className='homePage'>
           <header className='header'>
-            <div className="container flex">
+            <div className="container flex" >
                 <div className="logo">
                     KDS<img src="../assets/logo.png" alt="" />
                 </div>
@@ -32,17 +37,10 @@ const Header = () => {
                         <li><Link to='/SearchJob'>Employer</Link></li>
                         <li><Link to='/JobList'>Aplicant</Link></li>
                         <li><Link to='/about'>About us</Link></li>
-                        {/* <li><Link to='/shop'>Shop</Link></li>
-                        <li><Link to='/contact'>Contact us </Link></li> */}
-                        {/* <li className='icon'>
-                            
-                            <SearchOutlinedIcon className='HeaderIcon'/>
-                            <WorkIcon className='HeaderIcon'/>
-                            <GridViewIcon className='HeaderIcon'/>
-                        </li> */}
-                        <input className='log' type="button" value="Login" onClick={()=>loginBtn()}/>
-                        <input className='reg'type="button" value="Sign Up" onClick={()=>regBtn()}/>
-                        
+
+                        {showBtn?<input className='log' type="button" value="Login" onClick={()=>loginBtn()}/>:null}
+                        {showBtn?<input className='reg'type="button" value="Sign Up" onClick={()=>regBtn()}/>:null}
+                        {!showBtn?<input className='reg'type="button" value="profile" onClick={()=>profileBtn()}/>:null}
                     </ul>
                    
                 </div>

@@ -4,6 +4,8 @@ import "../css/ApplicantList.css";
 import SchoolIcon from '@mui/icons-material/School';
 import BackupTableIcon from '@mui/icons-material/BackupTable';
 import applicantRecord from '../JSON/applicantRecord';
+import {useNavigate} from 'react-router-dom';
+
 import Header from'./Header';
 
 
@@ -14,7 +16,10 @@ if(!localStorage.getItem('ApplicantRecord')) retrieveApplicantData = applicantRe
 const ApplicantList = () => {
     const applicants = retrieveApplicantData;
     const [loadMore , setLoadMore] = useState(applicants.length-5);
+
+    const navigate = useNavigate();
     
+    const handleBtn = (e) => {navigate('/ApplicantProfile',{state:e})};
    
   return (
     <>
@@ -38,7 +43,7 @@ const ApplicantList = () => {
                                     <span><SchoolIcon/> {applicant.school ? applicant.school : "none"}</span>
                                 </div>
                                 <div className='buttons'>
-                                    <button>See Profile</button>
+                                    <button onClick={()=>{handleBtn(applicant)}}>See Profile</button>
                                     <button>Message</button>
                                 </div>
                             </div>

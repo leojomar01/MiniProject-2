@@ -12,14 +12,6 @@ const CompanyInfo = (props) => {
     console.log(company);
     window.scrollTo(0, 0);
     
-
-
-
-
-    
-   
-
-
   return (
     <div>
         <Header/>

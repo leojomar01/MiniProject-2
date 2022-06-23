@@ -36,6 +36,7 @@ a {
 
 header {
     padding: 20px 10px;
+    box-shadow: 1rem .2rem .5rem ;
 }
 
 header img {
@@ -60,6 +61,7 @@ header ul li a {
 header ul li a:hover {
     color: #38d16a;
     font-weight: 500;
+    
 }
 
 .HeaderIcon {
@@ -118,6 +120,7 @@ input:hover {
 
 .container-home {
     width: 100%;
+    margin-top: 5vh;
 }
 
 .home .grid {

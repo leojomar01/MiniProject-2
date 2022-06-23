@@ -41,6 +41,8 @@
 
 .homePage header {
   padding: 20px 10px;
+  -webkit-box-shadow: 1rem .2rem .5rem;
+          box-shadow: 1rem .2rem .5rem;
 }
 
 .homePage header img {
@@ -122,6 +124,7 @@
 
 .homePage .container-home {
   width: 100%;
+  margin-top: 5vh;
 }
 
 .homePage .home .grid {

@@ -9,6 +9,8 @@ import Home from './components/Home';
 import HomePage from './components/HomePage';
 import Login from './components/Login';
 import Validate from './components/Validate';
+import ApplicantProfile from './components/ApplicantProfile';
+
 
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
             <Route path="/JobList" element={<JobList/>}/>
             <Route path="/Login" element={<Login/>}/>
             <Route path="/Validate" element={<Validate/>}/>
+            <Route path="/about" element={<HomePage/>}/>
+            <Route path="/ApplicantProfile" element={<ApplicantProfile/>}/>
            
         </Routes>
     </Router>
