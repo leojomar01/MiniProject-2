@@ -11,6 +11,8 @@ import {useNavigate} from 'react-router-dom';
 
 let retrieveApplicantData;
 retrieveApplicantData = localStorage.getItem('ApplicantRecord')?JSON.parse(localStorage.getItem('ApplicantRecord')): retrieveApplicantData = applicantRecord;
+let retrieveUsers = localStorage.getItem('Users')?JSON.parse(localStorage.getItem('Users')):[];
+
 let isAdmin=localStorage.getItem('isAdmin')?JSON.parse(localStorage.getItem('isAdmin')):false;
 let isLogin = localStorage.getItem('isActive')?JSON.parse(localStorage.getItem('isActive')):false;
 
@@ -20,18 +22,28 @@ const ApplicantList = () => {
 
     const navigate = useNavigate();
     const handleBtn = (e) => {navigate('/ApplicantProfile',{state:e})};
+    const signinBtn =() => {navigate('/Login')};
 
-    const handleDelete = (index)=>{
+
+    const handleDelete = (data,index)=>{
         let applicant=applicants;
         let message = window.confirm('Are You Sure You Want To Delete This Data?') ;
         if (message) {
+
+            console.log(data.email);
+            // console.log(retrieveUsers.email);
             applicant = applicant.reverse().filter((list,i)=>i !== index);
+            retrieveUsers = retrieveUsers.filter((list)=> data.email !==list.email)
+            console.log(retrieveUsers);
+
+
         }
         setApplicants(applicant.reverse())
     }
 
     useEffect(()=>{
         localStorage.setItem('ApplicantRecord',JSON.stringify(applicants));
+        localStorage.setItem('Users',JSON.stringify(retrieveUsers));
     },[applicants])
    
   return (
@@ -57,10 +69,10 @@ const ApplicantList = () => {
                                 </div>
                                 <div className='buttons'>
                                 {isLogin?<button onClick={()=>{handleBtn(applicant)}}>See Profile</button>:null}
-                                {!isLogin?<button>Sign in to see full profile</button>:null}
+                                {!isLogin?<button onClick={()=>signinBtn(applicant)}>Sign in to see full profile</button>:null}
 
                                     <button>Message</button>
-                                    {isAdmin?<button onClick={()=>handleDelete(index)}>Delete This Data</button>:null}
+                                    {isAdmin?<button onClick={()=>handleDelete(applicant,index)}>Delete This Data</button>:null}
                                         
                                 </div>
                             </div>

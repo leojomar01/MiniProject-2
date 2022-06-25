@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Button from '@mui/material/Button';
-import Header from './Header';
+import Navbar from './Navbar';
 import JobRecord from '../JSON/companyRecord';
 // import { useNavigate } from 'react-router-dom';
 
@@ -28,7 +28,7 @@ function Jobs() {
         company:formJob.company,
         job:formJob.jobTitle,
         skills:[formJob.skills],
-        salstart:parseInt(formJob.startSalary),
+        salStart:parseInt(formJob.startSalary),
         salEnd:parseInt(formJob.endSalary),
         position:formJob.position
       }
@@ -102,7 +102,7 @@ function Jobs() {
     };
   return (
     <div>
-      <Header/>
+      <Navbar/>
       <div className="formJobs">
          <h1 className="formJobsName">Post a Job</h1>
         {/* Job Title */}

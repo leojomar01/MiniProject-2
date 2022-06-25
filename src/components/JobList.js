@@ -44,7 +44,7 @@ const JobList = () => {
                 <div className='card'>
                   <span className='position' >{job.position} Position</span>
                   <span className='title'   onClick={()=>handleOnClick(job)} >{job.job}</span>
-                  <span className='sal'>{(job.salStart===null)?"Undisclosed":(job.salStart<=200)? (job.salStart*10)+",000 - "+(job.salEnd*10)+",000":job.salStart+" - "+job.salEnd}</span>
+                  <span className='sal'>{(job.salStart===null)?"Undisclosed":(job.salStart<=200)? (job.salStart*10)+",000 - "+(job.salEnd*10)+",000" : (job.salStart*1)+" - "+(job.salEnd)}{console.log(job.salStart)}</span>
                   <span className='intro'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem culpa doloribus impedit iusto! Iure, vitae illum quisquam magni numquam similique, autem ducimus veniam, nobis eligendi quasi corporis dolorem doloribus non!</span>
                   <span className='skills'>{job.skills.map((skill)=><p>{skill}</p>)}</span>
                   {isAdmin?<button onClick={()=>handleDelete(index)}>Delete this Data</button>:null}

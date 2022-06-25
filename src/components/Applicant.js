@@ -2,7 +2,7 @@ import React from 'react';
 import "../css/Applicant.css";
 
 import applicantRecord from '../JSON/applicantRecord';
-import {useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom'; 
 
 
 

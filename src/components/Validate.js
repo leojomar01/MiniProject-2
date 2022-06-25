@@ -41,6 +41,8 @@ function Validate() {
       users.push(formUser);
       localStorage.setItem("Users", JSON.stringify(users));
       setIsSuccess(true);
+      alert('Registered Successfully!');
+      window.location.reload(true);
       
     };
 

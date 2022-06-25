@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/ApplicantProfile.css'
 import { useLocation } from 'react-router-dom';
-import Header from './Header';
+import Navbar from './Navbar';
 
 
 const ApplicantProfile = () => {
@@ -10,7 +10,7 @@ const ApplicantProfile = () => {
 
   return (
     <>
-        <Header/>
+        <Navbar/>
         <div className='ApplicantProfile'>
             <div className='container'>
                 <span className='title'>PROFILE</span>

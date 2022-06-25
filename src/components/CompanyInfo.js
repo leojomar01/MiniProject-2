@@ -4,13 +4,18 @@ import '../css/CompanyInfo.css';
 import MonetizationOnOutlinedIcon from '@mui/icons-material/MonetizationOnOutlined';
 import BusinessIcon from '@mui/icons-material/Business';
 import Navbar from './Navbar';
+import {useNavigate} from 'react-router-dom'; 
+
 
 let isLogin = localStorage.getItem('isActive')?JSON.parse(localStorage.getItem('isActive')):false;
 const CompanyInfo = (props) => {
-    const arr = [1,2,3,4,5,6,7,8,9]
+    const arr = [1,2,3,4,5,6,7,8,9];
+    const navigate = useNavigate();
     const company = useLocation().state;
     console.log(company);
     window.scrollTo(0, 0);
+    const signinBtn =() => {navigate('/Login')};
+
     
   return (
     <div>
@@ -34,7 +39,7 @@ const CompanyInfo = (props) => {
             </ul>
         </div>
         {isLogin?<button className='button'>Apply Now</button>:null}
-        {!isLogin?<button className='button'>Sign in to Apply</button>:null}
+        {!isLogin?<button className='button' onClick={()=>signinBtn()}>Sign in to Apply</button>:null}
     </div>
     </div>
   )
