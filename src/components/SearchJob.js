@@ -2,12 +2,12 @@ import React from 'react';
 import '../css/SearchJob.css';
 import ApplicantList from './ApplicantList';
 import SearchBar from './SearchBar';
-import Header from './Header';
+import Navbar from './Navbar';
 
 const SearchJob = () => {
   return (
    <>
-   <Header/>
+   <Navbar/>
     <div  iv className='SearchJobBody'>
       <div className='searchTag'>
         <SearchBar/>

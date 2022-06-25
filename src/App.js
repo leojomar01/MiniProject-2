@@ -1,15 +1,14 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import SearchJob from './components/SearchJob';
-import ApplicantList from './components/ApplicantList';
-import SearchBar from './components/SearchBar';
-import Applicant from './components/Applicant';
 import JobList from './components/JobList';
 import CompanyInfo from './components/CompanyInfo';
-import Home from './components/Home';
 import HomePage from './components/HomePage';
 import Login from './components/Login';
 import Validate from './components/Validate';
 import ApplicantProfile from './components/ApplicantProfile';
+import ApplicantTest from './components/ApplicantTest';
+import Jobs from './components/Jobs';
+import Navbar from './components/Navbar';
 
 
 
@@ -18,13 +17,16 @@ function App() {
     <Router>
         <Routes>
             <Route path="/" element={<HomePage/>}/>
-            <Route path="/SearchJob" element={<SearchJob/>}/>
+            <Route path="/TalentPool" element={<SearchJob/>}/>
             <Route path="/CompanyInfo" element={<CompanyInfo/>}/>
             <Route path="/JobList" element={<JobList/>}/>
             <Route path="/Login" element={<Login/>}/>
-            <Route path="/Validate" element={<Validate/>}/>
-            <Route path="/about" element={<HomePage/>}/>
+            <Route path="/Register" element={<Validate/>}/>
+            <Route path="/About" element={<HomePage/>}/>
             <Route path="/ApplicantProfile" element={<ApplicantProfile/>}/>
+            <Route path="/test" element={<ApplicantTest/>}/>
+            <Route path="/PostAJob" element={<Jobs/>}/>
+            <Route path="/Navbar" element={<Navbar/>}/>
            
         </Routes>
     </Router>

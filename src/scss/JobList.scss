@@ -27,11 +27,10 @@
             &::-webkit-scrollbar{
                 display: none;
             }
-    
-    
             &:hover{
-                cursor: pointer;
+                cursor:default;
                 box-shadow: 1px 5px 5px gray;
+
             }
             .position{
                 
@@ -39,6 +38,10 @@
             .title{
                 font-weight: bold;
                 font-size: 2rem;
+                &:hover{
+                    cursor: pointer;
+                    color: #53BF9D;
+                }
             }
             .sal{
     

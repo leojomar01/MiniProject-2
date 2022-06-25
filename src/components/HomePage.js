@@ -1,16 +1,20 @@
 import React from 'react';
 import Home from './Home';
-import Header from './Header';
+import Navbar from './Navbar';
 import Applicant from './Applicant';
+import Branding from './Branding';
+import Footer from './Footer';
 
 
 
 const HomePage = () => {
   return (
     <div>
-        <Header/>
+        <Navbar/>
         <Home/>
+        <Branding/>
         <Applicant/>
+        <Footer/>
 
 
     </div>

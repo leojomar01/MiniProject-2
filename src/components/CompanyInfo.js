@@ -3,9 +3,9 @@ import { useLocation } from 'react-router-dom';
 import '../css/CompanyInfo.css';
 import MonetizationOnOutlinedIcon from '@mui/icons-material/MonetizationOnOutlined';
 import BusinessIcon from '@mui/icons-material/Business';
-import Header from './Header';
+import Navbar from './Navbar';
 
-
+let isLogin = localStorage.getItem('isActive')?JSON.parse(localStorage.getItem('isActive')):false;
 const CompanyInfo = (props) => {
     const arr = [1,2,3,4,5,6,7,8,9]
     const company = useLocation().state;
@@ -14,7 +14,7 @@ const CompanyInfo = (props) => {
     
   return (
     <div>
-        <Header/>
+        <Navbar/>
         <div className='companyInfo' id='head'>
         <div className='header'>
             <span className='job'>{company.job}</span>
@@ -33,7 +33,8 @@ const CompanyInfo = (props) => {
                 {arr.map(()=><li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>)}
             </ul>
         </div>
-        <button className='button'>Apply Now</button>
+        {isLogin?<button className='button'>Apply Now</button>:null}
+        {!isLogin?<button className='button'>Sign in to Apply</button>:null}
     </div>
     </div>
   )

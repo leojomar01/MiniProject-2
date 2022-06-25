@@ -1,31 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import "../css/ApplicantList.css";
 // import WorkIcon from '@mui/icons-material/Work';
 import SchoolIcon from '@mui/icons-material/School';
+import CandlestickChartIcon from '@mui/icons-material/CandlestickChart';
 import BackupTableIcon from '@mui/icons-material/BackupTable';
 import applicantRecord from '../JSON/applicantRecord';
 import {useNavigate} from 'react-router-dom';
 
-import Header from'./Header';
 
 
 let retrieveApplicantData;
-if(!localStorage.getItem('ApplicantRecord')) retrieveApplicantData = applicantRecord;
-
+retrieveApplicantData = localStorage.getItem('ApplicantRecord')?JSON.parse(localStorage.getItem('ApplicantRecord')): retrieveApplicantData = applicantRecord;
+let isAdmin=localStorage.getItem('isAdmin')?JSON.parse(localStorage.getItem('isAdmin')):false;
+let isLogin = localStorage.getItem('isActive')?JSON.parse(localStorage.getItem('isActive')):false;
 
 const ApplicantList = () => {
-    const applicants = retrieveApplicantData;
+    const [applicants, setApplicants] = useState(retrieveApplicantData);
     const [loadMore , setLoadMore] = useState(applicants.length-5);
 
     const navigate = useNavigate();
-    
     const handleBtn = (e) => {navigate('/ApplicantProfile',{state:e})};
+
+    const handleDelete = (index)=>{
+        let applicant=applicants;
+        let message = window.confirm('Are You Sure You Want To Delete This Data?') ;
+        if (message) {
+            applicant = applicant.reverse().filter((list,i)=>i !== index);
+        }
+        setApplicants(applicant.reverse())
+    }
+
+    useEffect(()=>{
+        localStorage.setItem('ApplicantRecord',JSON.stringify(applicants));
+    },[applicants])
    
   return (
     <>
     <div className='applicantList'>
         {
-            applicants.slice(loadMore).reverse().map((applicant)=>{
+            applicants.slice(loadMore).reverse().map((applicant,index)=>{
                 return(
                     <div className='applicant'>
                         <div className='profile'>
@@ -39,12 +52,16 @@ const ApplicantList = () => {
                             <div className='otherInfo'>
                                 <div className='skills'>
                                     <span><BackupTableIcon/> {applicant.skills.map(skill=>skill+", " )}</span>
-                                    <span> {(applicant.job)? applicant.job:"none"}</span>
+                                    <span><CandlestickChartIcon/> {(applicant.job)? applicant.job:"none"}</span>
                                     <span><SchoolIcon/> {applicant.school ? applicant.school : "none"}</span>
                                 </div>
                                 <div className='buttons'>
-                                    <button onClick={()=>{handleBtn(applicant)}}>See Profile</button>
+                                {isLogin?<button onClick={()=>{handleBtn(applicant)}}>See Profile</button>:null}
+                                {!isLogin?<button>Sign in to see full profile</button>:null}
+
                                     <button>Message</button>
+                                    {isAdmin?<button onClick={()=>handleDelete(index)}>Delete This Data</button>:null}
+                                        
                                 </div>
                             </div>
                         </div>

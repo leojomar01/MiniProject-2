@@ -38,7 +38,7 @@
 }
 
 .JobList .container .card:hover {
-  cursor: pointer;
+  cursor: default;
   -webkit-box-shadow: 1px 5px 5px gray;
           box-shadow: 1px 5px 5px gray;
 }
@@ -46,6 +46,11 @@
 .JobList .container .card .title {
   font-weight: bold;
   font-size: 2rem;
+}
+
+.JobList .container .card .title:hover {
+  cursor: pointer;
+  color: #53BF9D;
 }
 
 .JobList .container .card .skills {

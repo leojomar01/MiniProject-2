@@ -1,28 +1,25 @@
 import React, { useEffect, useState } from "react";
 import Button from '@mui/material/Button';
 import applicantRecord from '../JSON/applicantRecord';
-import { useNavigate } from 'react-router-dom';
-import Navbar from './Navbar';
 
 //css
-import '../css/forms.css'
+// import '../css/forms.css'
 
 
 
 let retrieveApplicantData;
 retrieveApplicantData = localStorage.getItem('ApplicantRecord')?JSON.parse(localStorage.getItem('ApplicantRecord')): retrieveApplicantData = applicantRecord;
-
 function Validate() {
     const [errors, setErrors] = useState({});
     const [formUser, setFormUser] = useState({ firstName: "", lastName: "", email: "", password: "", confirmPassword: "", job: "" });
     const [users, setUsers] = useState([]);
-    const [isSuccess, setIsSuccess] = useState(false);
     const applicants = retrieveApplicantData;
-    const navigate = useNavigate();
 
-    const handleLogin = () =>navigate('/Login');
 
+
+  
     const handleSubmit = (e) => {
+      
       const newApplicant = {
         fname:formUser.firstName,
         lname:formUser.lastName,
@@ -34,13 +31,14 @@ function Validate() {
         school:null,
         job:formUser.job
       };
+
       applicants.push(newApplicant);
       console.log(applicants)
       localStorage.setItem('ApplicantRecord',JSON.stringify(applicants))
-      console.log("saving...", formUser);
+      console.log("saving...", formUser.firstName,newApplicant);
       users.push(formUser);
       localStorage.setItem("Users", JSON.stringify(users));
-      setIsSuccess(true);
+      this.target.reset()
       
     };
 
@@ -108,7 +106,9 @@ function Validate() {
       });
     };
     
-
+    useEffect(()=>{
+      localStorage.setItem('ApplicantRecord',JSON.stringify(applicants))
+    });
     useEffect(() => {
       const storedUsers = localStorage.getItem("Users")
         ? JSON.parse(localStorage.getItem("Users"))
@@ -127,82 +127,69 @@ function Validate() {
     };
   
     return (
-      <div>
-        <Navbar/>
-         <div className="formValidate">
-        <h1 className="formValidateName">Registration</h1>
+      <div className="formValidate">
+        <h1>Registration</h1>
         {/* First Name */}
-        <label htmlFor= "firstName">First Name</label>
+        <label htmlFor= "firstName">First Name</label><br />
         <input
           name="firstName"
           type="text"
-          className="formInput"
+          placeholder="first name"
           onChange={handleChange}
           autoComplete="off"
-        />
+        /><br />
         <p className="errorMsg">{errors.firstNameError}</p>
 
         {/* Last Name */}
-        <label htmlFor= "lastName">Last Name</label>
+        <label htmlFor= "lastName">Last Name</label><br />
         <input
           name="lastName"
           type="text"
-          className="formInput"
           onChange={handleChange}
           autoComplete="off"
-        />
+        /><br />
         <p className="errorMsg">{errors.lastNameError}</p>
 
         {/* Email */}
-        <label htmlFor= "email">Email</label>
+        <label htmlFor= "email">Email</label><br />
          <input
           name="email"
           type="email"
-          className="formInput"
           onChange={handleChange}
           autoComplete="off"
-        />
+        /><br />
         <p className="errorMsg">{errors.emailError}</p>
 
         {/* Password */}
-        <label htmlFor= "password">Password</label>
+        <label htmlFor= "password">Password</label><br />
         <input
           name="password"
           type="password"
-          className="formInput"
           onChange={handleChange}
           autoComplete="off"
-        />
+        /><br />
         <p className="errorMsg">{errors.passwordError}</p>
 
          {/* Confirm Password */}
-         <label htmlFor= "confirmPassword">Confirm Password</label>
+         <label htmlFor= "confirmPassword">Confirm Password</label><br />
          <input
           name="confirmPassword"
           type="password"
-          className="formInput"
           onChange={handleChange}
           autoComplete="off"
-        />
+        /><br />
         <p className="errorMsg">{errors.confirmPasswordError}</p>
 
         {/* Job */}
-        <label htmlFor= "job">Job</label>
         <input
           name="job"
           type="text"
-          className="formInput"
           onChange={handleChange}
           autoComplete="off"
-        />
+        /><br />
          <p className="errorMsg">{errors.jobError}</p>
-
-        {isSuccess && <p className="successMsg">Registered Successfully!</p>}
-        <br />
-        <Button variant="contained" onClick={validate} className="validateBtn">Register</Button>
-        <br />
-        <p>Already Have an account? <span className="clickToLogin" onClick={()=>handleLogin()}>Log-In Here</span></p>
-      </div>
+  
+        <Button variant="contained" onClick={validate} className="loginBtn">Register</Button>
       </div>
     );
 }

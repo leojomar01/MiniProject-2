@@ -1,34 +1,33 @@
 import React from 'react'
+import '../css/home.css';
 
 
 const Home = () => {
-  return (
-    <div className='homePage'>
-      <section className='home'>
-        <div className="container-home grid">
-            <div className="left">
-                <div className="img">
-                    <img src="../assets/image-2.jpg" alt="" />
-                </div>
-            </div>
-            <div className="right topMargin">
-                <h4>We are here to help you <br />
-                 find your dream job</h4>
-                <div className="socialIcon">
-                    <i className='fab fa-facebook-f facebook'></i>
-                    <i className='fab fa-instagram instagram'></i>
-                    <i className='fab fa-twitter twitter'></i>
-                    <i className='fab fa-youtube youtube'></i>
-                    <i className='fab fa-pinterest pinterest'></i>
-                    <i className='fab fa-dribble dribble'></i>
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum rerum perspiciatis ipsam architecto! Autem ipsam ipsum dolorum, voluptate laudantium commodi adipisci incidunt provident maxime quae, ratione nihil culpa tenetur non!</p>
-                <button className='primary-btn'>Contact us</button>
-            </div>
+  return (   
+    <>
+      <div className="homePage">
+        <div className="row">
+          <div className="col-1">
+            <h4>We are here to help you <br />
+                  find your dream job</h4>
+            <button className='primary-btn'>Contact us</button>      
+          </div>
+
+          <div className="col-2">
+            <img src="../images/image-bg.jpg" alt="" className='img-home' />
+            <div className="color-box"></div>
+          </div>
         </div>
-      </section>
-    <hr />
-    </div>
+
+        <div className="socialLinks">
+            <i class='fab fa-facebook-f facebook'></i>
+            <i class='fab fa-instagram instagram'></i>
+            <i class='fab fa-twitter twitter'></i>
+            <i class='fab fa-youtube youtube'></i>
+            <i class='fab fa-pinterest pinterest'></i>
+        </div>
+      </div>
+    </>
   )
 }
 
