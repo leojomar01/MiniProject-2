@@ -8,6 +8,10 @@ import { useNavigate } from 'react-router-dom';
 
 //css
 import '../css/forms.css'
+<<<<<<< HEAD
+=======
+
+>>>>>>> c240c5008d2921ab6f91015d3f83580c3b3d6030
 
 let loginData = localStorage.getItem("Users")? JSON.parse(localStorage.getItem("Users")):[];
 function Login() {
@@ -47,13 +51,18 @@ function Login() {
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
         const emailInput = formValues.email;
         const passwordInput = formValues.password;
+<<<<<<< HEAD
         const getEntries = loginData;
 
+=======
+        const getEntries = JSON.parse(localStorage.getItem("Users"));
+>>>>>>> c240c5008d2921ab6f91015d3f83580c3b3d6030
         const filteredEntries = getEntries.filter((item) => {
             return emailInput === item.email && passwordInput === item.password;
         });
 
 
+<<<<<<< HEAD
 
 
 
@@ -87,6 +96,23 @@ function Login() {
 
 
         
+=======
+        if (!values.email){
+            errors.email = `Please provide an email.`
+        } else if (!regex.test(values.email)){
+            errors.email = "Please provide a valid email format.";
+        } 
+        if (!values.password){
+            errors.password = "Please provide a password.";
+        } else if (values.password.length < 4) {
+            errors.password = "Password must be more than 4 characters";
+        }
+        if (filteredEntries.length === 0){
+            errors.filteredEntries = "Record not found";
+            console.log(`error`)
+        } 
+        return errors;
+>>>>>>> c240c5008d2921ab6f91015d3f83580c3b3d6030
     }
 
 

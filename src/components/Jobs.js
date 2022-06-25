@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Button from '@mui/material/Button';
+<<<<<<< HEAD
 import Header from './Header';
 import JobRecord from '../JSON/companyRecord';
 // import { useNavigate } from 'react-router-dom';
@@ -50,6 +51,23 @@ function Jobs() {
     useEffect(() => {
       localStorage.setItem('JobRecord',JSON.stringify(jobs));
     }, [jobs]);
+=======
+//css
+import '../css/forms.css'
+
+function Jobs() {
+    const [errors, setErrors] = useState({});
+    const [formJob, setFormJob] = useState({ position: "", jobTitle: "", company: "", skills: "", startSalary: "", endSalary: "", email: ""});
+    const [jobOffers, setJobOffers] = useState([]);
+    const [isSuccess, setIsSuccess] = useState(false);
+  
+    const handleSubmit = (e) => {
+      console.log("saving...", formJob);
+      jobOffers.push(formJob);
+      localStorage.setItem("Jobs", JSON.stringify(jobOffers));
+      setIsSuccess(true);
+    };
+>>>>>>> c240c5008d2921ab6f91015d3f83580c3b3d6030
 
     const checkValidEmail = (email) => {
         const regRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -89,7 +107,16 @@ function Jobs() {
       });
     };
   
+<<<<<<< HEAD
    
+=======
+    useEffect(() => {
+      const storedJobs = localStorage.getItem("Jobs")
+        ? JSON.parse(localStorage.getItem("Jobs"))
+        : [];
+      setJobOffers(storedJobs);
+    }, []);
+>>>>>>> c240c5008d2921ab6f91015d3f83580c3b3d6030
   
     useEffect(() => {
       if (errors.jobTitleError === "" && errors.companyError === "" && errors.skillsError === "" && errors.positionError === "")
@@ -101,9 +128,13 @@ function Jobs() {
       setFormJob({ ...formJob, [e.target.name]: e.target.value });
     };
   return (
+<<<<<<< HEAD
     <div>
       <Header/>
       <div className="formJobs">
+=======
+    <div className="formJobs">
+>>>>>>> c240c5008d2921ab6f91015d3f83580c3b3d6030
          <h1 className="formJobsName">Post a Job</h1>
         {/* Job Title */}
         <label htmlFor= "jobTitle">Job Title</label>
@@ -171,7 +202,11 @@ function Jobs() {
         
 
         {/* Email */}
+<<<<<<< HEAD
         {/* <label htmlFor= "email" className="labelOptional">Email</label>
+=======
+        <label htmlFor= "email" className="labelOptional">Email</label>
+>>>>>>> c240c5008d2921ab6f91015d3f83580c3b3d6030
          <input
           name="email"
           type="email"
@@ -179,12 +214,19 @@ function Jobs() {
           onChange={handleChange}
           autoComplete="off"
         />
+<<<<<<< HEAD
         <p className="errorMsg">{errors.emailError}</p> */}
+=======
+        <p className="errorMsg">{errors.emailError}</p>
+>>>>>>> c240c5008d2921ab6f91015d3f83580c3b3d6030
   
         {isSuccess && <p className="successMsg">Registered Successfully!</p>}
         <Button variant="contained" onClick={validate} className="jobsBtn">Post a Job</Button>
     </div>
+<<<<<<< HEAD
     </div>
+=======
+>>>>>>> c240c5008d2921ab6f91015d3f83580c3b3d6030
   )
 }
 
