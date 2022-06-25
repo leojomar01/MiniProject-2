@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Button from '@mui/material/Button';
-<<<<<<< HEAD
 import applicantRecord from '../JSON/applicantRecord';
 import { useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
@@ -12,17 +11,12 @@ import '../css/forms.css'
 
 let retrieveApplicantData;
 retrieveApplicantData = localStorage.getItem('ApplicantRecord')?JSON.parse(localStorage.getItem('ApplicantRecord')): retrieveApplicantData = applicantRecord;
-=======
-//css
-import '../css/forms.css'
->>>>>>> c240c5008d2921ab6f91015d3f83580c3b3d6030
 
 function Validate() {
     const [errors, setErrors] = useState({});
     const [formUser, setFormUser] = useState({ firstName: "", lastName: "", email: "", password: "", confirmPassword: "", job: "" });
     const [users, setUsers] = useState([]);
     const [isSuccess, setIsSuccess] = useState(false);
-<<<<<<< HEAD
     const applicants = retrieveApplicantData;
     const navigate = useNavigate();
 
@@ -43,10 +37,6 @@ function Validate() {
       applicants.push(newApplicant);
       console.log(applicants)
       localStorage.setItem('ApplicantRecord',JSON.stringify(applicants))
-=======
-  
-    const handleSubmit = (e) => {
->>>>>>> c240c5008d2921ab6f91015d3f83580c3b3d6030
       console.log("saving...", formUser);
       users.push(formUser);
       localStorage.setItem("Users", JSON.stringify(users));
@@ -137,13 +127,9 @@ function Validate() {
     };
   
     return (
-<<<<<<< HEAD
       <div>
         <Navbar/>
          <div className="formValidate">
-=======
-      <div className="formValidate">
->>>>>>> c240c5008d2921ab6f91015d3f83580c3b3d6030
         <h1 className="formValidateName">Registration</h1>
         {/* First Name */}
         <label htmlFor= "firstName">First Name</label>
@@ -212,15 +198,11 @@ function Validate() {
          <p className="errorMsg">{errors.jobError}</p>
 
         {isSuccess && <p className="successMsg">Registered Successfully!</p>}
-<<<<<<< HEAD
         <br />
         <Button variant="contained" onClick={validate} className="validateBtn">Register</Button>
         <br />
         <p>Already Have an account? <span className="clickToLogin" onClick={()=>handleLogin()}>Log-In Here</span></p>
       </div>
-=======
-        <Button variant="contained" onClick={validate} className="validateBtn">Register</Button>
->>>>>>> c240c5008d2921ab6f91015d3f83580c3b3d6030
       </div>
     );
 }
