@@ -33,7 +33,7 @@
   border-radius: 7px;
   -webkit-box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.255);
           box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.255);
-  margin: 50px auto;
+  margin: 100px auto;
 }
 
 .JobList .container .profile-card .buttons {
@@ -157,7 +157,7 @@
 }
 
 .JobList .container .job-card {
-  margin: 50px auto;
+  margin: 95px auto;
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: list;

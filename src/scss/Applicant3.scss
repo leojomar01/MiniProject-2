@@ -17,6 +17,7 @@
     font-family: 100;
     margin-bottom: 10px;
 }
+
 .applicantMain {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -107,7 +108,8 @@
                     border: none;
                     color: white;
                     margin: 4px;
-                    &:hover {
+
+                    &:hover{
                         cursor: pointer;
                         color: #005469;
                         background-color: white;

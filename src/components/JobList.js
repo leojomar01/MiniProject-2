@@ -75,6 +75,7 @@ const JobList = () => {
               </div>
               <div className='buttons'>
                 <button onClick={()=>handlePostAJob()}>Post A job</button>
+                {!isAdmin?<button onClick={()=>handlePostAJob()}>Edit Profile</button>:null}
               </div>
             </div>
             :null

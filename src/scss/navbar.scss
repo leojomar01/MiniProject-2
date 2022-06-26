@@ -12,27 +12,23 @@
         height: 75px;
         background-color: #76BA99;
         color: white;
+        position: fixed;
+        width: 100%;
+        backdrop-filter: blur(20px);
+        z-index: 999999;
        
-        .logo {
-            font-size: 30px;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            img{
-                height: 100%;
-                &:hover{
-                    cursor: pointer;
-                    color: #005469;
-                }
+        .logo-content {
+            h3 {
+                color: white;
+                margin-left: 5px;
             }
-            h3{
-                &:hover{
+            img {
+                position: absolute;
+                height: 40px;
+                top: 17px;
+                left: 8px;
                 cursor: pointer;
-                color: #005469;
             }
-            }
-                
-            
         }
         .nav-links {
             display: flex;
@@ -87,11 +83,21 @@
             display: none;
         }
         @media screen and (max-width:780px) {
-            .logo {
+            .logo-content {
                 display: flex;
                 position: absolute;
                 top: 15px;
                 left: 35px;
+                align-items: center;
+                img {
+                    position: relative;
+                    height: 50px;
+                    top: 0;
+                    left: 0;
+                }
+                h3 {
+                    color: white;
+                }
             }
             .nav-links {
                 display: none;

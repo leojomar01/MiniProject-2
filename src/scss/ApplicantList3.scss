@@ -1,10 +1,11 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins%3Aital%2Cwght%400%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900&display=swap&fbclid=IwAR3PQ7owijXqc65lbkz9hhiGrOp7bA1YaraxEXo_h4vGyqCLQmxEwNKU9VU
+    @import url(https://fonts.googleapis.com/css2?family=Poppins%3Aital%2Cwght%400%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900&display=swap&fbclid=IwAR3PQ7owijXqc65lbkz9hhiGrOp7bA1YaraxEXo_h4vGyqCLQmxEwNKU9VU
 );
     * {
         box-sizing: border-box;
         padding: 0;
         margin: 0;
         font-family: 'Poppins', sans-serif;
+        border: 1px solid;
     }
     
     .applicantList {
@@ -18,11 +19,11 @@
             border-radius: 5px;
             margin: 1vh;
             border: .1rem solid #EEEEEE;
-            // overflow: hidden;
+            overflow: hidden;
             .profile {
                 grid-area: profile;
                 // margin-left: 2rem;
-                width: 65vw;
+                width: 100%;
                 padding: 10px;
                 .title {
                     margin-left: 10px;
@@ -52,6 +53,8 @@
                     }
                 }
                 .otherInfo {
+                    // display: grid;
+                    // grid-template-columns: 1fr;
                     .skills {
                         display: grid;
                         gap: .5rem;
@@ -59,9 +62,8 @@
                         margin-bottom: 10px;
                     }
                     .buttons {
-                        display: flex;
-                        justify-content: center;
-                        width: 55vw;
+                        // display: grid;
+                        // gap: 1rem;
                         button {
                             height: 5vh;
                             width: 30%;

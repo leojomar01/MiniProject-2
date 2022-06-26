@@ -1,21 +1,72 @@
 import React, { useEffect, useState } from "react";
 import Button from '@mui/material/Button';
+import Navbar from './Navbar';
 //css
-import '../css/forms.css'
+import '../css/editProfile.css';
+
+
+
+
+
+
+
+
+
+
+let accounts =localStorage.getItem('ApplicantRecord')?JSON.parse(localStorage.getItem('ApplicantRecord')):[];
+let loginEmail = localStorage.getItem('LoginEmail')?JSON.parse(localStorage.getItem('LoginEmail')):[];
+let acctLogin = [{fname:"Admin"}];
+
+if(loginEmail!=="admin"){
+  acctLogin = accounts.filter(account=>account.email === loginEmail);
+}
 
 function EditProfile() {
     const [errors, setErrors] = useState({});
-    const [formEdit, setFormEdit] = useState({ fname: "", lname: "", email: "", skills: "", yearsOfExp: "", experience: "", job: "", school: "" });
-    const [edits, setEdits] = useState([]);
+    const [formEdit, setFormEdit] = useState({ 
+      fname:acctLogin[0].fname, 
+      lname:acctLogin[0].lname,
+       email:acctLogin[0].email, 
+       skill1:acctLogin[0].skills[0],
+       skill2:acctLogin[0].skills[1],
+       skill3:acctLogin[0].skills[2], 
+       yearsOfExp:acctLogin[0].yearsOfExp, 
+       experience:acctLogin[0].experience, 
+       job:acctLogin[0].job, 
+       school:acctLogin[0].school 
+      });
+      
+    
+    
+    
+      const [edits, setEdits] = useState([]);
     const [isSuccess, setIsSuccess] = useState(false);
   
     const handleSubmit = (e) => {
       console.log("saving...", formEdit);
-      edits.push(formEdit);
-      localStorage.setItem("Applicants", JSON.stringify(edits)); //change this. idk where to save the editted profile
+      // edits.push(formEdit);
+      // localStorage.setItem("Applicants", JSON.stringify(edits)); //change this. idk where to save the editted profile
       setIsSuccess(true);
-      
+
+      const editedProfile = {
+        fname:formEdit.fname,
+        lname:formEdit.lname,
+        email:formEdit.email,
+        skills:[formEdit.skill1, formEdit.skill2, formEdit.skill3],
+        yearsOfExp:formEdit.yearsOfExp,
+        experience:formEdit.experience,
+        job:formEdit.job,
+        school:formEdit.school
+      }
+
+      accounts = accounts.filter(account=>account.email!== loginEmail);
+      accounts.push(editedProfile);
+      localStorage.setItem("ApplicantRecord",JSON.stringify(accounts));
     };
+
+
+   
+
 
     const checkValidEmail = (email) => {
         const regRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -44,35 +95,15 @@ function EditProfile() {
             ? "Email is required."
             : checkValidEmail(formEdit.email),  
 
-        skillsError: 
-            formEdit.skills === "" 
-            ? "At least one skill is needed." 
-            : "",
-
-        yearsOfExpError: 
-            formEdit.yearsOfExp < 0
-            ? "Input a valid number." 
-            : "",
-
-        jobError:
-            formEdit.job === ""
-            ? "Job is required."
-            : "",
 
         
       });
     };
     
 
-    useEffect(() => {
-      const storedEdits = localStorage.getItem("Applicants") //change
-        ? JSON.parse(localStorage.getItem("Applicants")) //change
-        : [];
-      setEdits(storedEdits);
-    }, []);
   
     useEffect(() => {
-      if (errors.fnameError === "" && errors.lnameError === "" && errors.emailError === ""  && errors.yearsOfExpError && errors.jobError === "")
+      if (errors.fnameError === "" && errors.lnameError === "" && errors.emailError === "")
         handleSubmit();
         // eslint-disable-next-line
     }, [errors]);
@@ -85,7 +116,9 @@ function EditProfile() {
 
 
   return (
-    <div className="formEditProfile">
+    <div>
+      <Navbar/> 
+       <div className="formEditProfile">
         <h1 className="formEditProfileName">Edit Profile</h1>
        {/* First Name */}
        <label htmlFor= "fname">First Name</label>
@@ -95,6 +128,7 @@ function EditProfile() {
           className="formInput"
           onChange={handleChange}
           autoComplete="off"
+          defaultValue={acctLogin[0].fname}
         />
         <p className="errorMsg">{errors.fnameError}</p>
 
@@ -106,57 +140,87 @@ function EditProfile() {
           className="formInput"
           onChange={handleChange}
           autoComplete="off"
+          defaultValue={acctLogin[0].lname}
+
         />
         <p className="errorMsg">{errors.lnameError}</p>
 
         {/* Email */}
-        <label htmlFor= "email">Email</label>
+        {/* <label htmlFor= "email">Email</label>
          <input
           name="email"
           type="email"
           className="formInput"
           onChange={handleChange}
           autoComplete="off"
+          defaultValue={acctLogin[0].email}
+
         />
-        <p className="errorMsg">{errors.emailError}</p>
+        <p className="errorMsg">{errors.emailError}</p> */}
 
         {/* Skills */}
         <label htmlFor= "skills">Skills</label>
         <input
-          name="skills"
+          name="skill1"
           type="text"
           className="formInput"
           onChange={handleChange}
           autoComplete="off"
+          defaultValue={acctLogin[0].skills[0]}
+
+        />
+         <input
+          name="skill2"
+          type="text"
+          className="formInput"
+          onChange={handleChange}
+          autoComplete="off"
+          defaultValue={acctLogin[0].skills[1]}
+
+        />
+         <input
+          name="skill3"
+          type="text"
+          className="formInput"
+          onChange={handleChange}
+          autoComplete="off"
+          defaultValue={acctLogin[0].skills[2]}
+
         />
         <p className="errorMsg">{errors.skillsError}</p>
+
+
+        {/*Experience */}
+        <label htmlFor= "job">Job Experienced</label>
+                <input
+                  name="experience"
+                  type="text"
+                  className="formInput"
+                  onChange={handleChange}
+                  autoComplete="off"
+                  defaultValue={acctLogin[0].experience}
+
+        />
+         <p className="errorMsg">{errors.experienceError}</p>
 
         {/* Years of Experience */}
         <label htmlFor= "yearsOfExp">Years of Experience</label>
         <input
-          name="position"
+          name="yearsOfExp"
           type="number"
           className="formInput"
           placeholder="Input number here"
           onChange={handleChange}
           autoComplete="off"
+          defaultValue={acctLogin[0].yearsOfExp}
+
         />
         <p className="errorMsg">{errors.yearsOfExp}</p>
 
-         {/*Experience */}
-         <label htmlFor= "job">Experience</label>
-         <input
-          name="experience"
-          type="text"
-          className="formInput"
-          onChange={handleChange}
-          autoComplete="off"
-        />
-         <p className="errorMsg">{errors.experienceError}</p>
-
+        
 
          {/* Job */}
-        <label htmlFor= "job">Job</label>
+        <label htmlFor= "job">Current Job</label>
         <input
           name="job"
           type="text"
@@ -164,6 +228,8 @@ function EditProfile() {
           placeholder="Optional"
           onChange={handleChange}
           autoComplete="off"
+          defaultValue={acctLogin[0].job}
+
         />
          <p className="errorMsg">{errors.jobError}</p>
 
@@ -176,11 +242,14 @@ function EditProfile() {
           placeholder="Optional"
           onChange={handleChange}
           autoComplete="off"
+          defaultValue={acctLogin[0].school}
+
         />
          <p className="errorMsg">{errors.schoolError}</p>
 
          {isSuccess && <p className="successMsg">Registered Successfully!</p>}
-        <Button variant="contained" onClick={validate} className="editProfileBtn">Save Changes</Button>
+        <Button variant="contained" onClick={handleSubmit} className="editProfileBtn">Save Changes</Button>
+    </div>
     </div>
   )
 }

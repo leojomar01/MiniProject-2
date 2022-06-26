@@ -3,6 +3,7 @@ import '../css/SearchJob.css';
 import ApplicantList from './ApplicantList';
 import SearchBar from './SearchBar';
 import Navbar from './Navbar';
+import CardDetails from './CardDetails';
 
 const SearchJob = () => {
   return (
@@ -13,7 +14,7 @@ const SearchJob = () => {
         <SearchBar/>
       </div>
       <div className='search'>
-        
+        <CardDetails/>
       </div>
       <div className='applicantList'>
         <ApplicantList/>

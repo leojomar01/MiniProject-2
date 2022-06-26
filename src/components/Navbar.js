@@ -42,7 +42,7 @@ const Navbar = () => {
   return (
     <>
         <nav className='navBar'>
-            <div className='logo'>
+            <div className='logo-content'>
                 <img onClick={()=>{handleGotoHompe()}} src="../images/logo.png" alt=""/>
                 <h3 onClick={()=>{handleGotoHompe()}}> EZ.com</h3> 
             </div> 

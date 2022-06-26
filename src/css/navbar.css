@@ -17,31 +17,24 @@
   height: 75px;
   background-color: #76BA99;
   color: white;
+  position: fixed;
+  width: 100%;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  z-index: 999999;
 }
 
-.navBar .logo {
-  font-size: 30px;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.navBar .logo-content h3 {
+  color: white;
+  margin-left: 5px;
 }
 
-.navBar .logo img {
-  height: 100%;
-}
-
-.navBar .logo img:hover {
+.navBar .logo-content img {
+  position: absolute;
+  height: 40px;
+  top: 17px;
+  left: 8px;
   cursor: pointer;
-  color: #005469;
-}
-
-.navBar .logo h3:hover {
-  cursor: pointer;
-  color: #005469;
 }
 
 .navBar .nav-links {
@@ -114,13 +107,25 @@
 }
 
 @media screen and (max-width: 780px) {
-  .navBar .logo {
+  .navBar .logo-content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     position: absolute;
     top: 15px;
     left: 35px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navBar .logo-content img {
+    position: relative;
+    height: 50px;
+    top: 0;
+    left: 0;
+  }
+  .navBar .logo-content h3 {
+    color: white;
   }
   .navBar .nav-links {
     display: none;

@@ -1,7 +1,8 @@
 .formLogin,
 .formValidate,
 .formJobs{
-    margin: 100px;
+    /* margin: 100px; */
+    padding: 70px;
 }
 
 .formLoginName,

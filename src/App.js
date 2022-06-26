@@ -10,6 +10,7 @@ import ApplicantTest from './components/ApplicantTest';
 import Jobs from './components/Jobs';
 import Navbar from './components/Navbar';
 import EditProfile from './components/EditProfile';
+import Aboutus from './components/Aboutus';
 
 
 
@@ -23,7 +24,7 @@ function App() {
             <Route path="/JobList" element={<JobList/>}/>
             <Route path="/Login" element={<Login/>}/>
             <Route path="/Register" element={<Validate/>}/>
-            <Route path="/About" element={<HomePage/>}/>
+            <Route path="/About" element={<Aboutus/>}/>
             <Route path="/ApplicantProfile" element={<ApplicantProfile/>}/>
             <Route path="/test" element={<ApplicantTest/>}/>
             <Route path="/PostAJob" element={<Jobs/>}/>

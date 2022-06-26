@@ -60,8 +60,8 @@ const ApplicantList = () => {
                                 {(applicant.gender==="F")? <img src="../images/f.jpg" alt=""/>:<img src="../images/m.png" alt=""/>}
 
                                 <div className='info'>
-                                    <span className='name'>{applicant.fname} {applicant.lname}</span>
-                                    <span className='exp'>{applicant.experience} with {applicant.yearsOfExp} yr(s) of experience</span>
+                                    <p className='name'>{applicant.fname} {applicant.lname}</p>
+                                    <p className='exp'>{applicant.experience} with {applicant.yearsOfExp} yr(s) of experience</p>
                                 </div>
                             </div>
                             <div className='otherInfo'>
@@ -85,7 +85,7 @@ const ApplicantList = () => {
                 
             )
         }
-        <button disabled={loadMore<=0} onClick={()=>setLoadMore(loadMore-5)}>Load More</button>
+        <button className="loadBtn" disabled={loadMore<=0} onClick={()=>setLoadMore(loadMore-5)}>Load More</button>
     </div>
     </>
   )
