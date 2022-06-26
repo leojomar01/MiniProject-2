@@ -8,6 +8,26 @@
     display: grid;
     grid-row-end: span;
     font-size: 2vh;
+    button{
+        height: 5vh;
+        margin-top: 15px;
+        border-radius: 2px;
+        background: white;
+        font-size: 11px;
+        border: none;
+        color: #53BF9D;
+        border: 1px solid #53BF9D;
+        margin: 4px;
+
+        &:hover{
+            cursor: pointer;
+            color: white;
+            background: #53BF9D;
+
+            border: 1px solid #53BF9D;
+        }
+
+    }
 }
 .applicant{
     min-width: 70vw;
@@ -51,6 +71,23 @@
             .buttons{
                 display: grid;
                 gap: 1rem;
+
+                button{
+                    height: 5vh;
+                    margin-top: 15px;
+                    border-radius: 2px;
+                    background: #53BF9D;
+                    font-size: 11px;
+                    border: none;
+                    color: white;
+                    margin: 4px;
+
+                    &:hover{
+                        cursor: pointer;
+                        color: #005469;
+                        border: 1px solid #53BF9D;
+                    }
+                }
                 
             }
         }

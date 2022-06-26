@@ -13,6 +13,25 @@
   font-size: 2vh;
 }
 
+.applicantList button {
+  height: 5vh;
+  margin-top: 15px;
+  border-radius: 2px;
+  background: white;
+  font-size: 11px;
+  border: none;
+  color: #53BF9D;
+  border: 1px solid #53BF9D;
+  margin: 4px;
+}
+
+.applicantList button:hover {
+  cursor: pointer;
+  color: white;
+  background: #53BF9D;
+  border: 1px solid #53BF9D;
+}
+
 .applicant {
   min-width: 70vw;
   height: 50vh;
@@ -73,4 +92,21 @@
   display: -ms-grid;
   display: grid;
   gap: 1rem;
+}
+
+.applicant .profile .otherInfo .buttons button {
+  height: 5vh;
+  margin-top: 15px;
+  border-radius: 2px;
+  background: #53BF9D;
+  font-size: 11px;
+  border: none;
+  color: white;
+  margin: 4px;
+}
+
+.applicant .profile .otherInfo .buttons button:hover {
+  cursor: pointer;
+  color: #005469;
+  border: 1px solid #53BF9D;
 }

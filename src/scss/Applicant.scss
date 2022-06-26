@@ -107,6 +107,13 @@
                     border: none;
                     color: white;
                     margin: 4px;
+
+                    &:hover{
+                        cursor: pointer;
+                        color: #005469;
+                        background-color: white;
+                        border: 1px solid #53BF9D;
+                    }
                 }
             }
         }

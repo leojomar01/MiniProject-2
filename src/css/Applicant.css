@@ -138,6 +138,13 @@
   margin: 4px;
 }
 
+.applicantMain .card footer .links button:hover {
+  cursor: pointer;
+  color: #005469;
+  background-color: white;
+  border: 1px solid #53BF9D;
+}
+
 @media screen and (max-width: 780px) {
   .applicantMain {
     -ms-grid-columns: 1fr 1fr;

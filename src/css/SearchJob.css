@@ -2,8 +2,7 @@
   height: 100vh;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "searchTag searchTag searchTag "
- "search applicantList applicantList ";
+      grid-template-areas: "searchTag searchTag searchTag " "search applicantList applicantList ";
   -ms-grid-rows: 35vh 1fr;
       grid-template-rows: 35vh 1fr;
   -ms-grid-columns: 1fr 4fr;

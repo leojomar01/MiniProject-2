@@ -21,6 +21,27 @@
 
 .navBar .logo {
   font-size: 30px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navBar .logo img {
+  height: 100%;
+}
+
+.navBar .logo img:hover {
+  cursor: pointer;
+  color: #005469;
+}
+
+.navBar .logo h3:hover {
+  cursor: pointer;
+  color: #005469;
 }
 
 .navBar .nav-links {
@@ -47,6 +68,13 @@
   padding: 10px 20px;
   margin: 0;
   cursor: pointer;
+}
+
+.navBar .nav-links .home:hover,
+.navBar .nav-links .employer:hover,
+.navBar .nav-links .applicantNavbar:hover,
+.navBar .nav-links .about:hover {
+  color: #005469;
 }
 
 .navBar .nav-links input {
