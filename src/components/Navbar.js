@@ -7,6 +7,7 @@ import '../css/navbar.css';
 
 let isLogin = localStorage.getItem('isActive')?JSON.parse(localStorage.getItem('isActive')):false;
 
+
 const Navbar = () => {
     const [isMobile, setIsMobile] = useState(false);
     // const [sidebar, setSidebar] = useState(false);
@@ -32,6 +33,7 @@ const Navbar = () => {
     const profileBtn =  () => {
         localStorage.setItem("isActive", JSON.stringify(false))
         localStorage.setItem("isAdmin", JSON.stringify(false))
+        localStorage.setItem("LoginEmail", JSON.stringify(""));
         window.location.reload(true);
     };
    

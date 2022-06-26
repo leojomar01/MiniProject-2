@@ -90,6 +90,7 @@
   text-align: center;
   margin-top: 10px;
   padding: 8px 0;
+  display: block;
 }
 
 .applicantMain .card footer h1 {

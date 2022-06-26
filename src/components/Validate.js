@@ -22,10 +22,14 @@ function Validate() {
 
     const handleLogin = () =>navigate('/Login');
 
+    function capitalized(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
     const handleSubmit = (e) => {
       const newApplicant = {
-        fname:formUser.firstName,
-        lname:formUser.lastName,
+        fname:capitalized(formUser.firstName),
+        lname:capitalized(formUser.lastName),
         email:formUser.email,
         skills:[],
         yearsOfExp:1,

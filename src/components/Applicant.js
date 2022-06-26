@@ -26,11 +26,11 @@ const Applicant = () => {
     <h2 className='applicantTitle2'>We have the tech talent you're looking for</h2>
       <div className='applicantMain'>
         {
-          applicants.reverse().slice(-6).map((applicant,index)=>{
+          applicants.slice(-6).reverse().map((applicant,index)=>{
             return(
               <div className='card'>
                 <div className='profile'>
-                  <img src={applicant.profile} alt="" />
+                {(applicant.gender==="F")? <img src="../images/f.jpg" alt=""/>:<img src="../images/m.png" alt=""/>}
                 </div>
                 
                 <div>

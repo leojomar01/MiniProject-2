@@ -15,7 +15,9 @@ const ApplicantProfile = () => {
             <div className='container'>
                 <span className='title'>PROFILE</span>
                 <div className='header'>
-                    <span className='profile'><img src={applicant.profile} alt="" /></span>
+                    <span className='profile'>
+                        {(applicant.gender==="F")? <img src="../images/f.jpg" alt=""/>:<img src="../images/m.png" alt=""/>}
+                    </span>
                     <span className='name'>{applicant.fname} {applicant.lname}</span>
                     <span className='email'>{applicant.email}</span>
                     <span className='bio'>{applicant.experience} with {applicant.yearsOfExp}years of experience</span>

@@ -24,7 +24,7 @@
   -ms-grid-column: 1;
   grid-area: profile;
   width: 250px;
-  height: 70vh;
+  height: 80vh;
   overflow: hidden;
   background-color: #fdfcfc;
   font-size: 16px;
@@ -34,6 +34,34 @@
   -webkit-box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.255);
           box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.255);
   margin: 50px auto;
+}
+
+.JobList .container .profile-card .buttons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.JobList .container .profile-card .buttons button {
+  background: #53BF9D;
+  outline: none;
+  border: none;
+  padding: 5px;
+  margin-top: 10px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.JobList .container .profile-card .buttons button:hover {
+  background: #6D8B74;
 }
 
 .JobList .container .profile-card .img-box {

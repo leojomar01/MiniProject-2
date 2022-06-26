@@ -9,6 +9,7 @@ import ApplicantProfile from './components/ApplicantProfile';
 import ApplicantTest from './components/ApplicantTest';
 import Jobs from './components/Jobs';
 import Navbar from './components/Navbar';
+import EditProfile from './components/EditProfile';
 
 
 
@@ -27,6 +28,7 @@ function App() {
             <Route path="/test" element={<ApplicantTest/>}/>
             <Route path="/PostAJob" element={<Jobs/>}/>
             <Route path="/Navbar" element={<Navbar/>}/>
+            <Route path="/EditProfile" element={<EditProfile/>}/>
            
         </Routes>
     </Router>

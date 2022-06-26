@@ -25,6 +25,8 @@ const ApplicantList = () => {
     const signinBtn =() => {navigate('/Login')};
 
 
+
+
     const handleDelete = (data,index)=>{
         let applicant=applicants;
         let message = window.confirm('Are You Sure You Want To Delete This Data?') ;
@@ -55,7 +57,8 @@ const ApplicantList = () => {
                     <div className='applicant'>
                         <div className='profile'>
                             <div className='title'>
-                                <img src={applicant.profile} alt="profile" />
+                                {(applicant.gender==="F")? <img src="../images/f.jpg" alt=""/>:<img src="../images/m.png" alt=""/>}
+
                                 <div className='info'>
                                     <span className='name'>{applicant.fname} {applicant.lname}</span>
                                     <span className='exp'>{applicant.experience} with {applicant.yearsOfExp} yr(s) of experience</span>
@@ -70,9 +73,8 @@ const ApplicantList = () => {
                                 <div className='buttons'>
                                 {isLogin?<button onClick={()=>{handleBtn(applicant)}}>See Profile</button>:null}
                                 {!isLogin?<button onClick={()=>signinBtn(applicant)}>Sign in to see full profile</button>:null}
-
-                                    <button>Message</button>
-                                    {isAdmin?<button onClick={()=>handleDelete(applicant,index)}>Delete This Data</button>:null}
+                                <button>Portfolio Link</button>
+                                {isAdmin?<button onClick={()=>handleDelete(applicant,index)}>Delete This Data</button>:null}
                                         
                                 </div>
                             </div>
