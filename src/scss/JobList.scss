@@ -26,6 +26,8 @@
             border-radius: 7px;
             box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.255);
             margin: 100px auto;
+            position: sticky;
+            top: 15vh;
             .buttons {
                 width: 100%;
                 display: flex;

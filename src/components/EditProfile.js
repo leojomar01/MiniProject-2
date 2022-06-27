@@ -62,6 +62,7 @@ function EditProfile() {
       accounts = accounts.filter(account=>account.email!== loginEmail);
       accounts.push(editedProfile);
       localStorage.setItem("ApplicantRecord",JSON.stringify(accounts));
+      window.location.reload(true);
     };
 
 

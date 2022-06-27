@@ -16,7 +16,7 @@ const Aboutus = () => {
             <div className="about-box"></div>
             <div className="card-image-1">
                 <div className="img-Box">
-                    <img src="../images/leo.png" alt="" />
+                    <img src="../images/m.png" alt="" />
                 </div>
                 <div className="card-image-content">
                     <div className="about-details">
@@ -39,7 +39,7 @@ const Aboutus = () => {
             </div>
             <div className="card-image-1">
                 <div className="img-Box">
-                    <img src="../images/richae.jpg" alt="" />
+                    <img src="../images/f.jpg" alt="" />
                 </div>
                 <div className="card-image-content">
                     <div className="about-details">
@@ -62,7 +62,7 @@ const Aboutus = () => {
             </div>
             <div className="card-image-1">
                 <div className="img-Box">
-                    <img src="../images/ken.jpg" alt="" />
+                    <img src="../images/m.png" alt="" />
                 </div>
                 <div className="card-image-content">
                     <div className="about-details">

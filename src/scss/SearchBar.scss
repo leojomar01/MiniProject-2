@@ -1,7 +1,6 @@
 .searchBar {
     margin-top: 5vh;
     background-color: #4095A5;
-    display: grid;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -31,6 +30,8 @@
             overflow: hidden;
             overflow-y: scroll;
             height: 10rem;
+            width: 20vw;
+            z-index: 5;
             &::-webkit-scrollbar {
                 display: none;
             }

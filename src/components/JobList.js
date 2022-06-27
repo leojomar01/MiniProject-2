@@ -29,6 +29,8 @@ const JobList = () => {
 
   const handleOnClick = (job) => {navigate('/CompanyInfo',{state:job})};
   const handlePostAJob = () =>navigate('/PostAJob');
+  const handleEditProfile =() => navigate('/EditProfile');
+  
 
   const handleDelete=(index)=>{
     let job = jobs;
@@ -75,7 +77,7 @@ const JobList = () => {
               </div>
               <div className='buttons'>
                 <button onClick={()=>handlePostAJob()}>Post A job</button>
-                {!isAdmin?<button onClick={()=>handlePostAJob()}>Edit Profile</button>:null}
+                {!isAdmin?<button onClick={()=>handleEditProfile()}>Edit Profile</button>:null}
               </div>
             </div>
             :null

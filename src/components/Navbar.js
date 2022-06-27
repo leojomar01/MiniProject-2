@@ -44,13 +44,13 @@ const Navbar = () => {
         <nav className='navBar'>
             <div className='logo-content'>
                 <img onClick={()=>{handleGotoHompe()}} src="../images/logo.png" alt=""/>
-                <h3 onClick={()=>{handleGotoHompe()}}> EZ.com</h3> 
+                <h3 onClick={()=>{handleGotoHompe()}}>EZ.com</h3> 
             </div> 
             <ul className={isMobile ? "nav-links-mobile" : "nav-links"}
                 onClick={()=>setIsMobile(false)}>
                 <Link to='/' className='home'><li>Home</li></Link>
-                <Link to='/TalentPool' className='employer'><li>Employer</li></Link>
-                <Link to='/JobList' className='applicantNavbar'><li>Applicant</li></Link>
+                <Link to='/TalentPool' className='employer'><li>Talent Pool</li></Link>
+                <Link to='/JobList' className='applicantNavbar'><li>Find a Job</li></Link>
                 <Link to='/about' className='about'><li>About us</li></Link>
                 
                 {!isLogin?<input className='log' type="button" value="Login" onClick={()=>loginBtn()}/>:null}

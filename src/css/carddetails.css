@@ -9,8 +9,9 @@ main {
   background-color: #fdfcfc;
   font-size: 16px;
   line-height: 22px;
-  position: relative;
-  top: -70px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 15vh;
   color: #000;
   border-radius: 7px;
   -webkit-box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.255);

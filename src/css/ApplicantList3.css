@@ -5,6 +5,7 @@
   padding: 0;
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  border: 1px solid;
 }
 
 .applicantList {
@@ -21,17 +22,12 @@
   border-radius: 5px;
   margin: 1vh;
   border: .1rem solid #EEEEEE;
-}
-
-.applicantList .applicant:hover {
-  cursor: default;
-  -webkit-box-shadow: 1px 5px 5px gray;
-          box-shadow: 1px 5px 5px gray;
+  overflow: hidden;
 }
 
 .applicantList .applicant .profile {
   grid-area: profile;
-  width: 65vw;
+  width: 100%;
   padding: 10px;
 }
 
@@ -77,16 +73,6 @@
   gap: .5rem;
   font-size: 13px;
   margin-bottom: 10px;
-}
-
-.applicantList .applicant .profile .otherInfo .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 55vw;
 }
 
 .applicantList .applicant .profile .otherInfo .buttons button {

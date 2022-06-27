@@ -4,7 +4,7 @@ import '../css/carddetails.css';
 const CardDetails = () => {
   return (
     <>
-      <main>
+      <main className='carMain'>
           <section className='card-1'>
             <h1>Find talent your way</h1>
           </section>

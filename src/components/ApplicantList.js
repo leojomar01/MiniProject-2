@@ -85,7 +85,7 @@ const ApplicantList = () => {
                 
             )
         }
-        <button className="loadBtn" disabled={loadMore<=0} onClick={()=>setLoadMore(loadMore-5)}>Load More</button>
+        <button className="loadBtn" disabled={loadMore<=0} onClick={()=>setLoadMore(loadMore-5)}>Load More <i class="fa-solid fa-arrow-down"></i></button>
     </div>
     </>
   )

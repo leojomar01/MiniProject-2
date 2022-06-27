@@ -19,6 +19,11 @@
             margin: 1vh;
             border: .1rem solid #EEEEEE;
             // overflow: hidden;
+
+            &:hover {
+                cursor: default;
+                box-shadow: 1px 5px 5px gray;
+            }
             .profile {
                 grid-area: profile;
                 // margin-left: 2rem;
