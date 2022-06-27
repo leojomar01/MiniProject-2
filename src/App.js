@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SearchJob from './components/SearchJob';
 import JobList from './components/JobList';
 import CompanyInfo from './components/CompanyInfo';
@@ -11,13 +11,13 @@ import Jobs from './components/Jobs';
 import Navbar from './components/Navbar';
 import EditProfile from './components/EditProfile';
 import Aboutus from './components/Aboutus';
-// import { HashRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 
 
 function App() {
   return (
-    <Router basename='/MiniProject-2'>
+    <HashRouter>
         <Routes>
             <Route path="/" element={<HomePage/>}/>
             <Route path="/TalentPool" element={<SearchJob/>}/>
@@ -33,7 +33,7 @@ function App() {
             <Route path="/EditProfile" element={<EditProfile/>}/>
            
         </Routes>
-    </Router>
+    </HashRouter>
     
   );
 }
