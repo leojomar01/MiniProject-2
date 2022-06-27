@@ -1,8 +1,9 @@
 
 
 .formEditProfileName{
+    margin-top: 80px;
     font-size: 50px;
-    color: #4095A5;
+    color:  #76ba99 !important;
 }
 
 .formLabel{
@@ -10,7 +11,7 @@
 }
 
 .formInput{
-    margin: 0;
+    margin: 2px;
     padding: 5px;
 }
 
@@ -26,8 +27,8 @@
 }
 
 .editProfileBtn{
-    background-color: #4095A5 !important;
-    margin-top: 20px;
+    background-color:  #76ba99 !important;
+    margin-top: 20px !important;
   }
 
   /*Registration and Job Form*/
