@@ -38,7 +38,7 @@ const SearchBar = () => {
 
   return (
     <div className="searchBar">
-        <div className="title">Find your next great tech hire</div>
+        <div className="title">Find your next great hire</div>
         <div className='searchInputs'>
             <input type="text" value={wordEntered} onChange={handleFilter} />
             <div className='result'>

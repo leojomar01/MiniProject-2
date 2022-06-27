@@ -1,5 +1,6 @@
 .searchBar {
     margin-top: 5vh;
+    height: 10vh;
     background-color: #4095A5;
     padding: 10px;
     display: flex;
@@ -16,7 +17,7 @@
         justify-self: center;
         height: 10px;
         input[type="text"] {
-            margin-top: 45px;
+            margin-top: 30px;
             margin-right: 50px;
             border: none;
             border-radius: 1rem;

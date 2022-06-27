@@ -24,8 +24,8 @@ const Applicant = () => {
 
   return (
     <>
-    <h2 className='applicantTitle'>Hire developers in days, not months</h2>
-    <h2 className='applicantTitle2'>We have the tech talent you're looking for</h2>
+    <h2 className='applicantTitle'>Hire professionals in days, not months</h2>
+    <h2 className='applicantTitle2'>We have the great talent you're looking for!</h2>
       <div className='applicantMain'>
         {
           applicants.slice(-6).reverse().map((applicant,index)=>{

@@ -1,4 +1,5 @@
 import React from 'react'
+import HomeImg from '../assets/image-bg.jpg'
 import '../css/home.css';
 
 
@@ -8,13 +9,13 @@ const Home = () => {
       <div className="homePage">
         <div className="row">
           <div className="col-1">
-            <h4>We are here to help you <br />
-                  find your dream job</h4>
+            <h4>Apply and Hire <br />
+                  the EZ way!</h4>
             <button className='primary-btn'>Contact us</button>      
           </div>
 
           <div className="col-2">
-            <img src="../images/image-bg.jpg" alt="" className='img-home' />
+            <img src={HomeImg} alt="" className='img-home' />
             <div className="color-box"></div>
           </div>
         </div>

@@ -5,6 +5,7 @@ import {useNavigate} from 'react-router-dom';
 import Navbar from "./Navbar";
 import male from '../assets/m.png'
 import female from '../assets/f.jpg'
+import Ads from './Ads';
 
 
 
@@ -52,6 +53,7 @@ const JobList = () => {
     <Navbar/>
     <div className='JobList'>
       <div className='container'>
+        {!isLogin ? <Ads /> : null}
             {
             isLogin?
             <div className="profile-card">
