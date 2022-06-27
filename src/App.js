@@ -16,7 +16,7 @@ import Aboutus from './components/Aboutus';
 
 function App() {
   return (
-    <Router>
+    <Router basename='/MiniProject-2'>
         <Routes>
             <Route path="/" element={<HomePage/>}/>
             <Route path="/TalentPool" element={<SearchJob/>}/>
