@@ -32,7 +32,7 @@ function Validate() {
         lname:capitalized(formUser.lastName),
         email:formUser.email,
         skills:["-","-","-"],
-        yearsOfExp:1,
+        yearsOfExp:0,
         experience:"",
         profile:"https://robohash.org/odionumquamlibero.png?size=100x100&set=set1",
         school:null,

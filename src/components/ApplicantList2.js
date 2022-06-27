@@ -20,7 +20,7 @@ let retrieveUsers = localStorage.getItem('Users')?JSON.parse(localStorage.getIte
 let isAdmin=localStorage.getItem('isAdmin')?JSON.parse(localStorage.getItem('isAdmin')):false;
 let isLogin = localStorage.getItem('isActive')?JSON.parse(localStorage.getItem('isActive')):false;
 
-const ApplicantList = () => {
+const ApplicantList = (props) => {
     const [applicants, setApplicants] = useState(retrieveApplicantData);
     const [loadMore , setLoadMore] = useState(applicants.length-5);
 
@@ -29,7 +29,7 @@ const ApplicantList = () => {
     const signinBtn =() => {navigate('/Login')};
 
 
-
+    console.log(props);
 
     const handleDelete = (data,index)=>{
         let applicant=applicants;

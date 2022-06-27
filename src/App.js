@@ -11,6 +11,7 @@ import Jobs from './components/Jobs';
 import Navbar from './components/Navbar';
 import EditProfile from './components/EditProfile';
 import Aboutus from './components/Aboutus';
+import SearchBar from './components/SearchBar2';
 import { HashRouter } from "react-router-dom";
 
 
@@ -31,6 +32,8 @@ function App() {
             <Route path="/PostAJob" element={<Jobs/>}/>
             <Route path="/Navbar" element={<Navbar/>}/>
             <Route path="/EditProfile" element={<EditProfile/>}/>
+            <Route path="/search" element={<SearchBar/>}/>
+
            
         </Routes>
     </HashRouter>
