@@ -1,5 +1,7 @@
 import React from 'react';
 import "../css/Applicant.css";
+import male from '../assets/m.png'
+import female from '../assets/f.jpg'
 
 import applicantRecord from '../JSON/applicantRecord';
 import {useNavigate} from 'react-router-dom'; 
@@ -30,7 +32,7 @@ const Applicant = () => {
             return(
               <div className='card'>
                 <div className='profile'>
-                {(applicant.gender==="F")? <img src="../images/f.jpg" alt=""/>:<img src="../images/m.png" alt=""/>}
+                {(applicant.gender==="F")? <img src={female}alt=""/>:<img src={male} alt=""/>}
                 </div>
                 
                 <div>

@@ -3,6 +3,9 @@ import '../css/JobList.css';
 import JobRecord from '../JSON/companyRecord';
 import {useNavigate} from 'react-router-dom';
 import Navbar from "./Navbar";
+import male from '../assets/m.png'
+import female from '../assets/f.jpg'
+
 
 
 let retrieveJobRecord;
@@ -53,7 +56,7 @@ const JobList = () => {
             isLogin?
             <div className="profile-card">
               <div className='img-box'>
-                {(acctLogin[0].gender==="F")? <img src="../images/f.jpg" alt=""/>:<img src="../images/m.png" alt=""/>}
+                {(acctLogin[0].gender==="F")? <img src={female} alt=""/>:<img src={male} alt=""/>}
               </div>
               <div>
                 <p>Welcome</p>

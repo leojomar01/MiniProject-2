@@ -1,6 +1,9 @@
 import React from 'react'
 import Navbar from './Navbar'
 import "../css/about.css";
+import male from '../assets/m.png'
+import female from '../assets/f.jpg'
+
 
 const Aboutus = () => {
   return (
@@ -16,7 +19,7 @@ const Aboutus = () => {
             <div className="about-box"></div>
             <div className="card-image-1">
                 <div className="img-Box">
-                    <img src="../images/m.png" alt="" />
+                    <img src={male} alt="" />
                 </div>
                 <div className="card-image-content">
                     <div className="about-details">
@@ -39,7 +42,7 @@ const Aboutus = () => {
             </div>
             <div className="card-image-1">
                 <div className="img-Box">
-                    <img src="../images/f.jpg" alt="" />
+                    <img src={female} alt="" />
                 </div>
                 <div className="card-image-content">
                     <div className="about-details">
@@ -62,7 +65,7 @@ const Aboutus = () => {
             </div>
             <div className="card-image-1">
                 <div className="img-Box">
-                    <img src="../images/m.png" alt="" />
+                    <img src={male} alt="" />
                 </div>
                 <div className="card-image-content">
                     <div className="about-details">

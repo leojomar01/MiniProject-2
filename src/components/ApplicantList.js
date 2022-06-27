@@ -6,6 +6,8 @@ import CandlestickChartIcon from '@mui/icons-material/CandlestickChart';
 import BackupTableIcon from '@mui/icons-material/BackupTable';
 import applicantRecord from '../JSON/applicantRecord';
 import {useNavigate} from 'react-router-dom';
+import male from '../assets/m.png'
+import female from '../assets/f.jpg'
 
 
 
@@ -57,7 +59,7 @@ const ApplicantList = () => {
                     <div className='applicant'>
                         <div className='profile'>
                             <div className='title'>
-                                {(applicant.gender==="F")? <img src="../images/f.jpg" alt=""/>:<img src="../images/m.png" alt=""/>}
+                                {(applicant.gender==="F")? <img src={female} alt=""/>:<img src={male} alt=""/>}
 
                                 <div className='info'>
                                     <p className='name'>{applicant.fname} {applicant.lname}</p>

@@ -2,6 +2,9 @@ import React from 'react';
 import '../css/ApplicantProfile.css'
 import { useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
+import male from '../assets/m.png'
+import female from '../assets/f.jpg'
+
 
 
 const ApplicantProfile = () => {
@@ -16,7 +19,7 @@ const ApplicantProfile = () => {
                 <span className='title'>PROFILE</span>
                 <div className='header'>
                     <span className='profile'>
-                        {(applicant.gender==="F")? <img src="../images/f.jpg" alt=""/>:<img src="../images/m.png" alt=""/>}
+                        {(applicant.gender==="F")? <img src={female} alt=""/>:<img src={male} alt=""/>}
                     </span>
                     <span className='name'>{applicant.fname} {applicant.lname}</span>
                     <span className='email'>{applicant.email}</span>

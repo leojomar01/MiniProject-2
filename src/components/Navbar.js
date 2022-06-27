@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import {Link,useNavigate} from "react-router-dom";
 import '../css/navbar.css';
+import logo from '../assets/logo.png'
 
 
 
@@ -43,7 +44,7 @@ const Navbar = () => {
     <>
         <nav className='navBar'>
             <div className='logo-content'>
-                <img onClick={()=>{handleGotoHompe()}} src="../images/logo.png" alt=""/>
+                <img onClick={()=>{handleGotoHompe()}} src={logo} alt=""/>
                 <h3 onClick={()=>{handleGotoHompe()}}>EZ.com</h3> 
             </div> 
             <ul className={isMobile ? "nav-links-mobile" : "nav-links"}
