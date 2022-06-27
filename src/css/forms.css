@@ -1,4 +1,10 @@
-.formLogin,
+
+.formLogin{
+  margin-left: 120px;
+  padding: 70px;
+}
+
+
 .formValidate,
 .formJobs{
     /* margin: 100px; */
@@ -8,9 +14,9 @@
 .formLoginName,
 .formValidateName,
 .formJobsName{
-    /* margin-top: 100px; */
+    margin-top: 80px;
     font-size: 50px;
-    color: #4095A5;
+    color: #76ba99;
 }
 
 .formLabel{
@@ -29,7 +35,7 @@
   }
 
 .successMsg{
-    color: #4095A5 !important;
+    color: #76ba99 !important;
     font-size: smaller;
 }
 
@@ -47,7 +53,7 @@
 .loginBtn,
 .validateBtn,
 .jobsBtn{
-    background-color: #4095A5 !important;
+    background-color: #76ba99 !important;
     margin-top: 20px;
   }
 
@@ -57,6 +63,7 @@
   }
 
 .loginImg{
+    margin-top: 60px;
     height: 60vh;
     width: auto;
     padding-right: 20px;
