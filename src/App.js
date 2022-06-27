@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import SearchJob from './components/SearchJob';
 import JobList from './components/JobList';
 import CompanyInfo from './components/CompanyInfo';
@@ -11,6 +11,7 @@ import Jobs from './components/Jobs';
 import Navbar from './components/Navbar';
 import EditProfile from './components/EditProfile';
 import Aboutus from './components/Aboutus';
+// import { HashRouter } from "react-router-dom";
 
 
 
