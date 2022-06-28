@@ -24,7 +24,7 @@ const Aboutus = () => {
                 <div className="card-image-content">
                     <div className="about-details">
                         <h2>Leo Villa Reyes <br />
-                                <span> Full Stact Developer</span>
+                                <span> Full Stack Developer</span>
                         </h2>
                         <div className="about-details-icons">
                             <a href="#" className="social-icon facebook"><i className="fab fa-facebook-f"></i></a>
@@ -47,7 +47,7 @@ const Aboutus = () => {
                 <div className="card-image-content">
                     <div className="about-details">
                         <h2>Mary Nikka Richae Abangan<br />
-                                <span> Full Stact Developer</span>
+                                <span> Full Stack Developer</span>
                         </h2>
                         <div className="about-details-icons">
                             <a href="#" className="social-icon facebook"><i className="fab fa-facebook-f"></i></a>
@@ -70,7 +70,7 @@ const Aboutus = () => {
                 <div className="card-image-content">
                     <div className="about-details">
                         <h2>Ken Domenick Sabella <br />
-                                <span> Full Stact Developer</span>
+                                <span> Full Stack Developer</span>
                         </h2>
                         <div className="about-details-icons">
                             <a href="#" className="social-icon facebook"><i className="fab fa-facebook-f"></i></a>
