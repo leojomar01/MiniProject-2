@@ -137,7 +137,8 @@
   display: flex;
   justify-content: space-between;
 }
-.about-card .card-image-1 .card-image-content .action-btn button {
+.about-card .card-image-1 .card-image-content .action-btn button,
+.about-card .card-image-1 .card-image-content .action-btn .portfolioBtn {
   padding: 10px;
   border-radius: 5px;
   border: none;
@@ -145,9 +146,10 @@
   font-size: 1em;
   width: 100px;
   font-weight: 500;
-  background: #CED89E;
+  background-color: #76BA99;
   color: #fff;
   cursor: pointer;
+  text-decoration: none;
 }
 .about-card .card-image-1 .card-image-content .action-btn button:nth-child(2) {
   border: 1px solid #999;

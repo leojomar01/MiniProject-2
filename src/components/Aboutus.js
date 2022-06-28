@@ -34,7 +34,7 @@ const Aboutus = () => {
                             <a href="#" className="social-icon linkedin"><i className="fab fa-linkedin"></i></a>
                         </div>
                         <div className="action-btn">
-                            <button>Portfolio</button>
+                            <a href="https://leojomar01.github.io/E-Portfolio/" className="portfolioBtn">Portfolio</a>
                             <button>Message</button>
                         </div>
                     </div>
@@ -57,7 +57,7 @@ const Aboutus = () => {
                             <a href="#" className="social-icon linkedin"><i className="fab fa-linkedin"></i></a>
                         </div>
                         <div className="action-btn">
-                            <button>Portfolio</button>
+                            <a href="https://mnrichae.github.io/portfolio/" className="portfolioBtn">Portfolio</a>
                             <button>Message</button>
                         </div>
                     </div>
@@ -80,7 +80,7 @@ const Aboutus = () => {
                             <a href="#" className="social-icon linkedin"><i className="fab fa-linkedin"></i></a>
                         </div>
                         <div className="action-btn">
-                            <button>Portfolio</button>
+                            <a href="https://kdsabella.github.io/portfolio.github.io/" className="portfolioBtn">Portfolio</a>
                             <button>Message</button>
                         </div>
                     </div>
