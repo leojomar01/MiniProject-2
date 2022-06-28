@@ -67,7 +67,12 @@
                         display: flex;
                         justify-content: center;
                         width: 55vw;
-                        button {
+                        button,
+                        .flexiPortfolio {
+                            text-decoration: none;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
                             height: 5vh;
                             width: 30%;
                             margin-top: 25px;

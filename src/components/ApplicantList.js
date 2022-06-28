@@ -77,7 +77,7 @@ const ApplicantList = () => {
                                 <div className='buttons'>
                                 {isLogin?<button onClick={()=>{handleBtn(applicant)}}>See Profile</button>:null}
                                 {!isLogin?<button onClick={()=>signinBtn(applicant)}>Sign in to see full profile</button>:null}
-                                <button>Portfolio Link</button>
+                                <a href={applicant.link} className="flexiPortfolio">Portfolio Link</a>
                                 {isAdmin?<button onClick={()=>handleDelete(applicant,index)}>Delete This Data</button>:null}
                                         
                                 </div>
