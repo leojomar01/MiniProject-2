@@ -1,76 +1,136 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins%3Aital%2Cwght%400%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900&display=swap&fbclid=IwAR3PQ7owijXqc65lbkz9hhiGrOp7bA1YaraxEXo_h4vGyqCLQmxEwNKU9VU);
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 .applicantList {
+  position: relative;
+  top: -47px;
+}
+
+.applicantList .applicant {
+  min-height: 50vh;
+  width: 85%;
+  padding: 1rem 2rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-row-span: span;
-      grid-row-end: span;
-  font-size: 2vh;
+  border-radius: 5px;
+  margin: 1vh;
+  border: .1rem solid #EEEEEE;
 }
 
-.applicant {
-  min-width: 70vw;
-  height: 50vh;
-  padding: 2rem 1rem;
-  background-color: aliceblue;
-  border-radius: 1rem;
-  overflow: hidden;
-  margin-bottom: 2vh;
-  -webkit-box-shadow: .1rem .1rem .5rem;
-          box-shadow: .1rem .1rem .5rem;
+.applicantList .applicant:hover {
+  cursor: default;
+  -webkit-box-shadow: 1px 5px 5px gray;
+          box-shadow: 1px 5px 5px gray;
 }
 
-.applicant .profile {
+.applicantList .applicant .profile {
   grid-area: profile;
-  margin-left: 2rem;
+  width: 65vw;
+  padding: 10px;
 }
 
-.applicant .profile .title {
+.applicantList .applicant .profile .title {
+  margin-left: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
   margin-bottom: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 2fr;
+      grid-template-columns: 2fr 2fr;
 }
 
-.applicant .profile .title img {
+.applicantList .applicant .profile .title img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: 1px solid;
 }
 
-.applicant .profile .title .info {
-  display: -ms-grid;
-  display: grid;
+.applicantList .applicant .profile .title .info {
+  position: relative;
+  left: -140px;
   width: 100%;
-  padding-left: 1rem;
+  padding-left: 10px;
 }
 
-.applicant .profile .title .info .name {
-  font-size: 5vh;
+.applicantList .applicant .profile .title .info .name {
+  font-size: 18px;
+  margin-top: 20px;
+  font-weight: 700;
 }
 
-.applicant .profile .otherInfo {
+.applicantList .applicant .profile .title .info .exp {
+  font-size: 12px;
+}
+
+.applicantList .applicant .profile .otherInfo .skills {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 3fr 1fr;
-      grid-template-columns: 3fr 1fr;
+  gap: .5rem;
+  font-size: 13px;
+  margin-bottom: 10px;
 }
 
-.applicant .profile .otherInfo .skills {
-  display: -ms-grid;
-  display: grid;
-  gap: 1rem;
+.applicantList .applicant .profile .otherInfo .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 55vw;
 }
 
-.applicant .profile .otherInfo .buttons {
-  display: -ms-grid;
-  display: grid;
-  gap: 1rem;
+.applicantList .applicant .profile .otherInfo .buttons button,
+.applicantList .applicant .profile .otherInfo .buttons .flexiPortfolio {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 5vh;
+  width: 30%;
+  margin-top: 25px;
+  border-radius: 2px;
+  background: #53BF9D;
+  font-size: 11px;
+  border: none;
+  color: white;
+  margin: 4px;
+}
+
+.applicantList .applicant .profile .otherInfo .buttons button:hover,
+.applicantList .applicant .profile .otherInfo .buttons .flexiPortfolio:hover {
+  cursor: pointer;
+  color: #005469;
+  border: 1px solid #53BF9D;
+}
+
+.applicantList .loadBtn {
+  background: #53BF9D;
+  height: 20px;
+  width: 250px;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
 }

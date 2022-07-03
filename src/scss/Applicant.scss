@@ -2,6 +2,7 @@
 );
 * {
     font-family: 'Poppins', sans-serif;
+
 }
 
 .applicantTitle {
@@ -19,12 +20,11 @@
 }
 .applicantMain {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 5px;
     flex-wrap: wrap;
     justify-content: center;
     .card {
-        width: 230px;
         overflow: hidden;
         background-color: #fdfcfc;
         font-size: 16px;
@@ -32,7 +32,7 @@
         color: #000;
         box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
         margin: 10px auto;
-
+        width: 22vw;
         
         .profile {
             width: 100%;
@@ -78,9 +78,10 @@
                 margin: 12px 0;
                 text-align: center;
             }
+           
             .social-icon {
-                font-size: 15px;
-                margin: 0 5%;
+                font-size: 3.5vh;
+                margin: 0 2vh;
                 color: rgba(0, 0, 0, .9);
             }
             .facebook:hover {

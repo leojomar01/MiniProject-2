@@ -1,13 +1,22 @@
 .searchBar {
+  margin-top: 5vh;
+  height: 10vh;
   background-color: #4095A5;
-  height: 30vh;
-  display: -ms-grid;
-  display: grid;
-  padding-top: 8vh;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .searchBar .title {
-  height: 2rem;
+  font-size: 20px;
+  margin-top: 50px;
+  margin-left: 50px;
+  font-weight: 500;
+  text-align: center;
 }
 
 .searchBar .searchInputs {
@@ -15,17 +24,12 @@
   display: grid;
   -ms-grid-column-align: center;
       justify-self: center;
-  height: 6vh;
-  justify-self: center;
-  margin: 0 1rem;
-  overflow: hidden;
-  overflow-y: auto;
-  height: 6rem;
-  width: 20vw;
-  z-index: 1;
+  height: 10px;
 }
 
-.searchBar input[type="text"] {
+.searchBar .searchInputs input[type="text"] {
+  margin-top: 30px;
+  margin-right: 50px;
   border: none;
   border-radius: 1rem;
   min-width: 20vw;
@@ -34,12 +38,27 @@
   padding: 0 1rem;
 }
 
-.searchBar .searchList {
+.searchBar .searchInputs .result {
   padding: 0 1.5rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 10rem;
+  width: 20vw;
+  z-index: 5;
 }
 
-.searchBar .searchList:hover {
-  background-color: #7D8F9B;
+.searchBar .searchInputs .result::-webkit-scrollbar {
+  display: none;
+}
+
+.searchBar .searchInputs .result .searchList {
+  background-color: #efefef;
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.searchBar .searchInputs .result .searchList:hover {
+  background-color: #717171;
   color: white;
   cursor: pointer;
 }

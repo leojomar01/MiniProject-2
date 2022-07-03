@@ -28,7 +28,7 @@ const Applicant = () => {
     <h2 className='applicantTitle2'>We have the great talent you're looking for!</h2>
       <div className='applicantMain'>
         {
-          applicants.slice(-6).reverse().map((applicant,index)=>{
+          applicants.slice(-8).reverse().map((applicant,index)=>{
             return(
               <div className='card'>
                 <div className='profile'>

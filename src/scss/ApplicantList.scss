@@ -8,7 +8,6 @@
     }
     
     .applicantList {
-        position: relative;
         top: -47px;
         .applicant {
             min-height: 50vh;
@@ -95,7 +94,7 @@
         .loadBtn {
             background: #53BF9D;
             height: 20px;
-            width: 250px;
+            width: 70vw;
             outline: none;
             border: none;
             color: #fff;

@@ -1,10 +1,11 @@
 .searchBar {
-    margin-top: 5vh;
-    height: 10vh;
+    margin-top: 12vh;
+    height: 20vh;
     background-color: #4095A5;
     padding: 10px;
     display: flex;
     justify-content: space-between;
+    
     .title {
         font-size: 20px;
         margin-top: 50px;
@@ -17,7 +18,7 @@
         justify-self: center;
         height: 10px;
         input[type="text"] {
-            margin-top: 30px;
+            margin-top: 5vh;
             margin-right: 50px;
             border: none;
             border-radius: 1rem;
