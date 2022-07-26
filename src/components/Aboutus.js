@@ -57,7 +57,7 @@ const Aboutus = () => {
                             <a href="#" className="social-icon linkedin"><i className="fab fa-linkedin"></i></a>
                         </div>
                         <div className="action-btn">
-                            <a href="https://mnrichae.github.io/portfolio/" className="portfolioBtn">Portfolio</a>
+                            <a href="https://mnrichae.github.io/" className="portfolioBtn">Portfolio</a>
                             <button>Message</button>
                         </div>
                     </div>
